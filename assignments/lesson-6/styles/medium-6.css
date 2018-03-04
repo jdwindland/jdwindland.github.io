@@ -32,6 +32,10 @@
         padding: 0.5em;
     }
 
+    ul.hide {
+        display:inline;
+    }
+
     li:last-child {
         border-right: none;
     }
