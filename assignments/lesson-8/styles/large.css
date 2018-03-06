@@ -1,0 +1,83 @@
+@media only screen and (min-width: 64em) {
+    /* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here */
+
+
+    body {
+        max-width: 1200px;
+    }
+
+
+    .city{
+        position: relative;
+        float: none;
+        clear: both;
+        width: 100%;
+        text-align: center;
+    }
+
+    figure img {
+        max-height: 250px;
+    }
+
+
+
+    .summary{
+        position: relative;
+        float: none;
+        clear: both;
+        width: 75%;
+        padding: 2rem;
+        margin: 0 auto;
+        overflow: auto;
+        margin-top: -2rem;
+    }
+
+    .current{
+        display: inline-block;
+        vertical-align: top;
+        width: 40%;
+        float: left;
+        margin-top: -5rem;
+    }
+
+    picture>img{
+        float: none;
+    }
+
+    .highlow {
+        display: inline-block;
+        vertical-align: top;
+        padding-right: 0;
+        padding-top: .5rem;
+        float: none;
+        width: 20%;
+        margin-left: -3%;
+    }
+
+    .conditions {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        padding-top: .5rem;
+        margin-left: 2rem;
+    }
+
+    #description{
+        float: none;
+        margin-top: 0;
+        margin-right: 0;
+    }
+
+    section.forecast {
+        position: relative;
+        margin-top: 0;
+    }
+
+
+    article p.town-article img {
+        width: 45%;
+        padding-right: 1rem;
+        float: left;
+    }
+
+}
