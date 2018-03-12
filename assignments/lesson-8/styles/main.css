@@ -150,6 +150,62 @@ article {
     margin-top: 3em;
 }
 
+.thanks {
+    text-align: center;
+}
+
+fieldset {
+    background-color: #CCE6FF;
+    border-radius: .8em;
+    margin: 1.5em 0;
+    border: #191970 solid 1px;
+}
+
+legend {
+    color: #191970;
+    padding: .5em;
+    border: #191970 solid 1px;
+    background-color: #CCE6FF;
+    border-radius: .4em;
+}
+
+label{
+    display: block;
+    margin: .5em;
+}
+
+label span{
+    display: block;
+    font-size: 1rem;
+    color: #191970;
+    padding-top: .9em;
+    padding-bottom: .2em;
+}
+
+input.submitBtn{
+    -webkit-appearance: none;
+    color: #fff;
+    border: solid 1px 191970;
+    border-radius: 7px;
+    width: 50%;
+    margin: .5em 0;
+    font-size: 1em;
+    padding: .6em;
+    background: #191970;
+    box-shadow: 4px 4px 10px #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 footer aside {
     text-align: center;
     padding: .5em;

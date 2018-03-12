@@ -41,7 +41,7 @@
             <button onclick="toggleNavMenu()">&#9776;</button>
             <ul id="hamburger" class="hide">
                 <li><a href="home.html">Home</a></li>
-                <li class="active"><a href="franklin-6.html">Franklin</a></li>
+                <li class="active"><a href="franklin.html">Franklin</a></li>
                 <li><a href="greenville.html">Greenville</a></li>
                 <li><a href="springfield.html">Springfield</a></li>
                 <li><a href="stormcenter.html">Storm Center</a></li>
@@ -63,23 +63,22 @@
 
                 <h3>Report a Storm or Unusual Weather Event</h3>
 
-                <form action="" method="post" enctype="multipart/form-data" name="storm" id="stormCenter">
+                <form action="thanks.html" method="post" enctype="multipart/form-data" name="storm" id="stormCenter">
 
                     <fieldset>
-                        <legend><span>Personal Information</span></legend>
+                        <legend><span><strong>Personal Information</strong></span></legend>
 
-                        <label><span>Full Name:</span><input name="fullname" type="text" placeholder="Enter Name" pattern="[a-zA-Z]{5}" required></label>
+                        <label><span>Full Name:</span><input name="fullname" type="text" placeholder="Enter Name" pattern="[a-zA-Z ]{5,99}" required></label>
 
                         <label><span>Email:</span><input name="email" type="email" placeholder="email@sample.com"></label>
 
                         <label><span>Phone:</span><input name="phone" type="tel" required></label>
 
                         <label><span>Zip Code:</span><input name="zip" type="number" required></label>
-
                     </fieldset>
 
                     <fieldset>
-                        <legend><span>Storm Information</span></legend>
+                        <legend><span><strong>Storm Information</strong></span></legend>
 
                         <label><span>Store Date:</span><input name="date" type="date"></label>
 
@@ -96,21 +95,30 @@
 
                         <label><span>Store Severity (select 1-10):</span><input name="severity" type="range" min="1" max="10"></label>
 
-                        <label><span>Storm Region:</span><input></label>
+                        <label>
+                            <span>Storm Region:</span><select name="region">
+                                <option value="default" selected disabled>Select Region</option>
+                                <option value="franklin">Franklin</option>
+                                <option value="greenville">Greenville</option>
+                                <option value="springfield">Springfield</option>
+                            </select>
+                        </label>
 
-                        <label><span>Danger Level:</span><input></label>
+                        <label><span>Danger Level:</span>
+                            <input name="danger" type="radio" value="yes">Yes<br>
+                            <input name="danger" type="radio" value="no">No<br>
+                            <input name="danger" type="radio" value="maybe">Maybe
+                        </label>
 
-                        <label><span>Additional Information or Comments:</span><input></label>
-
-
-
+                        <label><span>Additional Information or Comments:</span><textarea name="comments" rows="10" cols="30"></textarea></label>
                     </fieldset>
 
-
-
+                    <input type="submit" value="Submit" class="submitBtn">
 
                 </form>
+
             </div>
+
         </main>
 
         <footer>
