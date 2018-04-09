@@ -1,0 +1,88 @@
+* { box-sizing: border-box;}
+
+/*
+    Table Colors
+    #e7f0ed - odd data rows
+    #e7ffed - even data rows
+    #628ca6 - header background - white font
+    #7fb9c2 - title and footer background - black font
+*/
+
+
+body {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: "Ubuntu", "sans-serif";
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+}
+
+main{
+    margin: 1rem;
+    width: 350px;
+    height: 340px;
+    border: 1px solid;
+    overflow: auto;
+    box-shadow: 5px 5px 10px 1px #b1cd7e;
+}
+
+section{
+    margin: 1rem;
+    width: 300px;
+    box-shadow: 5px 5px 15px 1px #628ca6;
+}
+
+h3{
+    background-color: #7fb9c2;
+    font-size: 1.75rem;
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    border: 2px solid;
+    border-color: gray;
+}
+
+table{
+    min-width: 300px;
+    text-align: center;
+    border: 2px solid;
+    border-color: gray;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: #628ca6;
+    color: white;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #e7ffed;
+}
+
+tbody tr:nth-child(even){
+    background-color: #e7f0ed;
+}
+
+tbody tr:nth-child(5) td:nth-child(1){
+    font-style: italic;
+}
+
+td{
+    border: 2px solid;
+    border-color: gray;
+    padding: .25rem;
+}
+
+.selected{
+    background-color: #628ca6;
+    color: white;
+}
+
+tfoot{
+    background-color: #7fb9c2;
+    font-size: .75rem;
+    padding: 1rem;
+    text-align: center;
+
+}

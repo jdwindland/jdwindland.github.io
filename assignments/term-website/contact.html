@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The Mountain Spoke</title>
+        <meta name="description" content="The Mountain Spoke: The resource for bicycle enthusiasts.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+        <link href="styles/normalize.css" rel="stylesheet">
+        <link href="styles/main.css" rel="stylesheet">
+        <link href="styles/medium.css" rel="stylesheet">
+        <link href="styles/large.css" rel="stylesheet">
+    </head>
+
+
+    <body>
+        <header>
+            <img src="images/MountainSpokeLogo2.png" width="200" alt="The Mountain Spoke Logo">
+            <h1>The Mountain Spoke</h1>
+            <div class="subheading">The Bicycle Enthusiast's dream.</div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href=home.html>Home</a></li>
+                <li><a href=event.html>Annual Events</a></li>
+                <li><a href=adventure.html>Adventure Tours</a></li>
+                <li><a href=sales.html>Bicycle Shop</a></li>
+                <li><a href=repairs.html>Bicycle Repairs</a></li>
+                <li><a href=contact.html>Contact Us</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="top">
+                <figure>
+                    <img src="images/home-lg.jpg" alt="Mountain Bike Images" sizes="100vw" srcset="images/home-sm.jpg 600w, images/home-med.jpg 1024w, images/home-lg.jpg 1200w">
+                </figure>
+            </div>
+            <section>
+                <h2>The Mountain Spoke</h2>
+                <p>
+                    3950 Valley Commons Drive<br>
+                    Bozeman, MT 59718-5603<br>
+                    (999)999-9999 <br>
+                    contact@themountainspoke.com
+                </p>
+                <h3>Store Hours</h3>
+                <p>
+                    Mon-Fri: 10am - 6pm<br>
+                    Sat: 10am - 5pm<br>
+                    Sun: Closed
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5575.653168617295!2d-111.0919320132141!3d45.67438155230648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2s3950+Valley+Commons+Dr%2C+Bozeman%2C+MT+59718!5e0!3m2!1sen!2sus!4v1523241649077" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </section>
+
+
+            <aside>
+                <h2>Contact Us</h2>
+                <form action="contact-thanks.html" method="post" enctype="multipart/form-data" name="contact" id="contact">
+
+                    <fieldset>
+                        <legend><span><strong>Contact Information</strong></span></legend>
+
+                        <label><span>Full Name:</span><input name="fullname" type="text" placeholder="Enter Name" pattern="[a-zA-Z ]{5,99}" required></label>
+
+                        <label><span>Email:</span><input name="email" type="email" placeholder="email@sample.com" required></label>
+
+                        <label><span>Phone:</span><input name="phone" type="tel"></label>
+
+                        <label><span>Message:</span><textarea name="comments" rows="10" cols="30"></textarea></label>
+                    </fieldset>
+
+                    <input type="submit" value="Submit" class="submitBtn">
+
+                </form>
+            </aside>
+
+
+
+
+            <p>Thanks Placeholder.<br>
+                <a href=contact-thanks.html>Thanks</a>
+            </p>
+        </main>
+        <footer>
+            <p class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span> | <a href="resource.html">Resources</a> | <a href="video.html">Video Overview</a></p>
+        </footer>
+        <script src="scripts/currentdate.js"></script>
+    </body>
+
+</html>

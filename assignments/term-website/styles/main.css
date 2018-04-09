@@ -5,37 +5,40 @@
 body {
     font-size: 1rem;
     line-height: 1.25rem;
-    font-family: "Open Sans", "Verdana", "sans-serif";
+    font-family: "Catamaran", "sans-serif", "Verdana";
     position: relative;
     max-width: 600px;
     margin: auto;
+    background-color: #E3D2BF;
 }
 
 header {
-    background-color: #191970;
+    background-color: #B27836;
     height: 10rem;
     max-height: 10rem;
-    color: #F5FFFA;
-    overflow: auto;=
+    color: #111927;
+    overflow: auto;
 }
 
 header h1, .subheading {
-    margin-left: 10rem;
-    color: #F5FFFA;
+    margin-left: 12rem;
+    color: #111927;
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-top: 3rem;
+    font-family: "Jua"
 }
 
 header img {
-    width: 10rem;
+    width: 11rem;
     position: absolute;
+    margin-left: 1.5rem;
 }
 
 header .subheading {
-    font-style: italic;
+    font-size: 1.5rem;
 }
 
 nav {
@@ -49,7 +52,7 @@ nav button {
     float: right;
     height: 1.75em ;
     width: 2.5em ;
-    color: #191970;
+    color: #111927;
     display: block;
 }
 
@@ -71,17 +74,17 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: #191970;
+    color: #111927;
     text-decoration: none;
 }
 
 nav ul li.active a {
-    background-color: #CCE6FF;
-    color: #191970;
+    background-color: #B27836;
+    color: #111927;
     font-size: 1.15em;
 }
 nav ul li a:hover {
-    color: #1E90FF;
+    color: #B27836;
     font-size: 1.15em;
 }
 
@@ -90,7 +93,7 @@ main {
 }
 
 main h2 {
-    color: #191970;
+    color: #345186;
 }
 
 main figure {
@@ -107,7 +110,7 @@ section {
 }
 
 h3 {
-    color: #1E90FF;
+    color: #3A5EA0;
     text-align: center;
 }
 
@@ -133,7 +136,7 @@ article p.town-article img {
 }
 
 article>h3 {
-    color: #1E90FF;
+    color: #345186;
     margin-top: 0;
     line-height: 1.25em;
     text-align: left;
@@ -145,21 +148,77 @@ article>h3 {
 
 article {
     border: 2px solid;
-    border-color: #191970;
+    border-color: #111927;
     padding: 1em;
     margin-top: 3em;
 }
 
+.thanks {
+    text-align: center;
+}
+
+fieldset {
+    background-color: #E3D2BF;
+    border-radius: .8em;
+    margin: 1.5em 0;
+    border: #111927 solid 1px;
+}
+
+legend {
+    color: #111927;
+    padding: .5em;
+    border: #111927 solid 1px;
+    background-color: #E3D2BF;
+    border-radius: .4em;
+}
+
+label{
+    display: block;
+    margin: .5em;
+}
+
+label span{
+    display: block;
+    font-size: 1rem;
+    color: #111927;
+    padding-top: .9em;
+    padding-bottom: .2em;
+}
+
+input.submitBtn{
+    -webkit-appearance: none;
+    color: #E3D2BF;
+    border: solid 1px #111927;
+    border-radius: 7px;
+    width: 50%;
+    margin: .5em 0;
+    font-size: 1em;
+    padding: .6em;
+    background: #111927;
+    box-shadow: 4px 4px 10px #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 footer aside {
     text-align: center;
     padding: .5em;
-    color: #2F4F4F;
-    background-color: #CCE6FF;
+    color: #B27836;
+    background-color: #111927;
 }
 
 footer>p {
-    color: #F5FFFA;
-    background-color: #191970;
+    color: #B27836;
+    background-color: #111927;
     font-size: .8em;
     text-align: center;
     margin: 0 auto;
