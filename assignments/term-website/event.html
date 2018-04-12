@@ -24,7 +24,8 @@
             <div class="subheading">The Bicycle Enthusiast's dream.</div>
         </header>
         <nav>
-            <ul>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul id="hamburger" class="hide">
                 <li><a href=home.html>Home</a></li>
                 <li><a href=event.html>Annual Events</a></li>
                 <li><a href=adventure.html>Adventure Tours</a></li>
@@ -86,7 +87,10 @@
         <footer>
             <p class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span> | <a href="resource.html">Resources</a> | <a href="video.html">Video Overview</a></p>
         </footer>
+
+        <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
+
     </body>
 
 </html>
