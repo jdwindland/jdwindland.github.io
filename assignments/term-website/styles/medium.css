@@ -4,8 +4,18 @@
         max-width: 1024px;
     }
 
-    header h1, .subheading {
+    header h1 {
         padding-left: 3rem;
+        margin-top: 3rem;
+        font-size: 3rem;
+    }
+
+.main {
+    display: none;
+    }
+
+.medium {
+    display: block;
     }
 
     nav {
@@ -61,53 +71,40 @@
         width: 100%;
     }
 
-    .city{
-        position: absolute;
-        float: left;
-        width: 50%;
-    }
 
-    .summary{
-        float: right;
-        width: 40%;
-        min-width: 375px;
-    }
 
     picture>img{
         float: left
     }
 
-    .highlow{
-        position: relative;
-        float: right;
-        padding-right: 25%;
-        padding-top: 15%;
+    .layout{
+        display: inline-flex;
     }
 
-    #description{
-        float: right;
-        margin-top: -6.5rem;
-        margin-right: 7rem;
+    .left .contact{
+        width:60%
     }
 
-    .conditions {
-        clear: both;
-
+    .right{
+        width:40%;
     }
 
-    section.forecast {
-        clear: both;
-        float: none;
+    .guidetour{
+        overflow: auto;
+    }
+
+    .guidetour>img{
+        padding-bottom: 4rem;
+    }
+
+    .headline{
+        display: none;
+    }
+
+    .headlinemed{
         display: block;
-        margin: 1.5em 0 -1em 0;
-        text-align: center;
-        border: 2px solid;
-        border-color: #191970;
-    }
-
-    .forecast h3 {
-        text-align: center;
-        margin: .5em;
+        font-size: 2rem;
+        line-height: 1.10;
     }
 
     table {

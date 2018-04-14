@@ -26,13 +26,13 @@ header {
 
 header h1 {
     margin-left: 12rem;
-    margin-top: 3rem;
-    font-size: 3rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
     font-family: "Jua";
     color: #111927;
 }
 
-.large{
+.medium, .large{
     display: none;
 }
 
@@ -150,7 +150,7 @@ ol {
     padding: 1rem;
 }
 
-section.guidetour, section.bike, .resources, .contact {
+section.guidetour, section.bike, .resources, .contact, .thanks {
     border: 2px solid;
     border-color: #111927;
     padding: 1em;
@@ -167,6 +167,9 @@ section.guidetour, section.bike, .resources, .contact {
     line-height: 1.10;
 }
 
+.headlinemed{
+    display: none;
+}
 
 .bullets{
     margin-left: 2.5rem;
@@ -188,6 +191,7 @@ iframe{
 
 fieldset {
     background-color: #E3D2BF;
+    width: 100%;
     border-radius: .8em;
     margin: 1.5em 0;
     border: #111927 solid 1px;

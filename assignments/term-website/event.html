@@ -4,8 +4,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>The Mountain Spoke</title>
-        <meta name="description" content="The Mountain Spoke: The resource for bicycle enthusiasts.">
+        <title>The Mountain Spoke | Annual Events</title>
+        <meta name="description" content="Join us for the annual Cycle the Continetal Divide event and bicycle the rooftop of the United States. Hosted by The Mountain Spoke.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Google API font reference -->
         <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
@@ -20,7 +20,8 @@
     <body>
         <header>
             <img src="images/MountainSpokeLogo2.png" width="200" alt="The Mountain Spoke Logo">
-            <h1 class="small">The Mountain <br><br>Spoke</h1>
+            <h1 class="main">The <br><br> Mountain <br><br>Spoke</h1>
+            <h1 class="medium">The Mountain <br><br>Spoke</h1>
             <h1 class="large">The Mountain Spoke</h1>
         </header>
         <nav>
@@ -40,9 +41,10 @@
                     <img src="images/event-lg.jpg" alt="Cycle the Continental Divide" sizes="100vw" srcset="images/event-sm.jpg 600w, images/event-med.jpg 1024w, images/event-lg.jpg 1200w">
                 </figure>
                 <h2 class="headline"><strong>Cycle the<br>Continental Divide</strong></h2>
+                <h2 class="headlinemed"><strong>Cycle the Continental Divide</strong></h2>
             </div>
-            <section>
-                <article>
+            <section class="layout">
+                <article class="left">
                     <p>This is a bike expedition over the rooftop of the United States. It will make a lasting impression propelling you forward in your life with a great feeling of achievement, with new friends from across the planet and with a new sense of purpose – fit in body and mind! Rain drops may fall on your left or on your right, but the best drops will fall on the trail. Drops of sweat on the trail of The Great Divide.</p><br>
                     <p>From Butte to Pinedale, Wyoming, you'll be riding through wide-open mountain valleys. The vegetation thins out into valleys with many different varieties of sage and high-elevation alpine woods. The route crosses the Continental Divide many times, and the climbing is longer with very steep sections on some of the roads. You'll see many cows. You leave Montana crossing the divide into Idaho. You are only in Idaho for 72 miles and ride along some blue-ribbon fishing streams and an old railroad bed on the west side of Yellowstone National Park. You'll cross into Wyoming between Yellowstone and Grand Teton National parks on a very scenic road with some great backcountry campsites and a genuine undeveloped hot springs. The route cuts through a corner of the Tetons before heading east up over the divide again and then down the west side of the Wind River Range. The prettiest alpine region on the whole route can be found here. Just south of Pinedale, is a stretch with the worst mosquitos on the entire route but makes for a great character builder. Farther on there's the unforgetable sensation of riding on the crest of the divide for several miles. You then hit an extremely picturesque section of high desert following the Lander cutoff — part of one of the westward wagon routes. Water is very scarce through here, so carry plenty.</p><br>
                     <p>
@@ -62,29 +64,29 @@
                     <h3>Route:</h3>
                     <img src="images/route.jpg" alt="Cycle the Continental Divide Route" id="map">
                 </article>
+                <aside class="rightform">
+                    <h2>Register today for Cycle the Continetal Divide!</h2>
+                    <form action="event-thanks.html" method="post" enctype="multipart/form-data" name="event" id="event">
+
+                        <fieldset>
+                            <legend><span><strong>Registration Information</strong></span></legend>
+
+                            <label><span>Full Name:</span><input name="fullname" type="text" placeholder="Enter Name" pattern="[a-zA-Z ]{5,99}" required></label>
+
+                            <label><span>Email:</span><input name="email" type="email" placeholder="email@sample.com" required></label>
+
+                            <label><span>Phone:</span><input name="phone" type="tel"></label>
+
+                            <label><span>Date of Birth:</span><input name="date" type="date" required></label>
+
+                            <label><span>Home State or Country:</span><input name="home" type="text" placeholder="Enter State or Country" required></label>
+
+                            <label><span>Special Accommodations/Comments:</span><textarea name="comments" rows="10" cols="30"></textarea></label>
+                        </fieldset>
+                        <input type="submit" value="Submit" class="submitBtn">
+                    </form>
+                </aside>
             </section>
-            <aside>
-                <h2>Register today for Cycle the Continetal Divide!</h2>
-                <form action="event-thanks.html" method="post" enctype="multipart/form-data" name="event" id="event">
-
-                    <fieldset>
-                        <legend><span><strong>Registration Information</strong></span></legend>
-
-                        <label><span>Full Name:</span><input name="fullname" type="text" placeholder="Enter Name" pattern="[a-zA-Z ]{5,99}" required></label>
-
-                        <label><span>Email:</span><input name="email" type="email" placeholder="email@sample.com" required></label>
-
-                        <label><span>Phone:</span><input name="phone" type="tel"></label>
-
-                        <label><span>Date of Birth:</span><input name="date" type="date" required></label>
-
-                        <label><span>Home State or Country:</span><input name="home" type="text" placeholder="Enter State or Country" required></label>
-
-                        <label><span>Special Accommodations/Comments:</span><textarea name="comments" rows="10" cols="30"></textarea></label>
-                    </fieldset>
-                    <input type="submit" value="Submit" class="submitBtn">
-                </form>
-            </aside>
         </main>
         <footer>
             <p class="footer-bar"><strong>&copy;2018 | The Mountain Spoke | <span id="currentdate"></span> | <a href="resource.html">Resources</a> | <a href="video.html">Video Overview</a></strong></p>
