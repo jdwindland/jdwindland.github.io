@@ -20,18 +20,18 @@
     <body>
         <header>
             <img src="images/MountainSpokeLogo2.png" width="200" alt="The Mountain Spoke Logo">
-            <h1>The Mountain Spoke</h1>
-            <div class="subheading">The Bicycle Enthusiast's dream.</div>
+            <h1 class="small">The Mountain <br><br>Spoke</h1>
+            <h1 class="large">The Mountain Spoke</h1>
         </header>
         <nav>
             <button onclick="toggleNavMenu()">&#9776;</button>
             <ul id="hamburger" class="hide">
-                <li><a href=home.html>Home</a></li>
-                <li><a href=event.html>Annual Events</a></li>
-                <li><a href=adventure.html>Adventure Tours</a></li>
-                <li><a href=sales.html>Bicycle Shop</a></li>
-                <li><a href=repairs.html>Bicycle Repairs</a></li>
-                <li><a href=contact.html>Contact Us</a></li>
+                <li class="active"><a href=home.html><strong>Home</strong></a></li>
+                <li><a href=event.html><strong>Annual Events</strong></a></li>
+                <li><a href=adventure.html><strong>Adventure Tours</strong></a></li>
+                <li><a href=sales.html><strong>Bicycle Shop</strong></a></li>
+                <li><a href=repairs.html><strong>Bicycle Repairs</strong></a></li>
+                <li><a href=contact.html><strong>Contact Us</strong></a></li>
             </ul>
         </nav>
         <main>
@@ -58,5 +58,24 @@
         <script src="scripts/currentdate.js"></script>
 
     </body>
+
+    <script>
+        var urlString = document.location.href;
+        var urlArray = urlString.split('/');
+        var pageHREF=urlArray[urlArray.length-1];
+
+        if (pageHREF !=="") {
+            var menu = document.querySelectorAll('ul#hamburger li a');   //I've set this to primaryNav because that's my ul id value
+            var i;
+
+            for(i=0; i<menu.length; i++) {
+                var currentURL=(menu[i].getAttribute("href"));
+                menu[i].parentNode.className="";
+                if (currentURL===pageHREF) {
+                    menu[i].parentNode.className="active";
+                }
+            }
+        }
+    </script>
 
 </html>

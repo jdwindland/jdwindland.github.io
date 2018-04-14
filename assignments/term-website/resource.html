@@ -20,13 +20,13 @@
     <body>
         <header>
             <img src="images/MountainSpokeLogo2.png" width="200" alt="The Mountain Spoke Logo">
-            <h1>The Mountain Spoke</h1>
-            <div class="subheading">The Bicycle Enthusiast's dream.</div>
+            <h1 class="small">The Mountain <br><br>Spoke</h1>
+            <h1 class="large">The Mountain Spoke</h1>
         </header>
         <nav>
             <button onclick="toggleNavMenu()">&#9776;</button>
             <ul id="hamburger" class="hide">
-                <li><a href=home.html>Home</a></li>
+                <li class="active"><a href=home.html>Home</a></li>
                 <li><a href=event.html>Annual Events</a></li>
                 <li><a href=adventure.html>Adventure Tours</a></li>
                 <li><a href=sales.html>Bicycle Shop</a></li>
@@ -39,49 +39,51 @@
                 <figure>
                     <img src="images/home-lg.jpg" alt="Mountain Bike Images" sizes="100vw" srcset="images/home-sm.jpg 600w, images/home-med.jpg 1024w, images/home-lg.jpg 1200w">
                 </figure>
+                <h2 class="headline"><strong>Resources</strong></h2>
             </div>
-            <h2>Resources</h2>
-            <ol>
-                <li><a href=https://www.1001freedownloads.com/free-cliparts>Free Downloads - Clipart</a>
-                    <ul>
-                        <li><a href=https://www.1001freedownloads.com/free-clipart/bikewheel>Bike Wheel</a></li>
-                        <li><a href=https://www.1001freedownloads.com/free-clipart/rpg-map-symbols-mountains-2>Mountain</a></li>
-                    </ul>
-                </li>
-                <li><a href=https://www.spokeshop.com>Spoke Shop</a>
-                    <ul>
-                        <li>Company Description</li>
-                        <li>Store Hours</li>
-                        <li>Bicycle Information</li>
-                        <li>Adventure Tour Information</li>
-                    </ul>
-                </li>
-                <li><a href=https://www.brokenspokesantafe.com>The Broken Spoke</a>
-                    <ul>
-                        <li>Company Description</li>
-                        <li>Repair Services</li>
-                        <li>Images</li>
-                    </ul>
-                </li>
-                <li><a href=https://www.owenhousecycling.com>Owenhouse Cycling</a>
-                    <ul>
-                        <li>Repair Description</li>
-                        <li>Repair Image</li>
-                    </ul>
-                </li>
-                <li><a href=https://www.adventurecycling.org>Adventure Cycling Association</a>
-                    <ul>
-                        <li>Event information for Cycle the Continental Divide</li>
-                        <li>Route Map</li>
-                    </ul>
-                </li>
-                <li><a href=https://www.the-great-divide.com>The Great Divide</a>
-                    <ul>
-                        <li>Event information for Cycle the Continental Divide.</li>
-                        <li>Images</li>
-                    </ul>
-                </li>
-            </ol>
+            <section class="resources">
+                <ol>
+                    <li><a href=https://www.1001freedownloads.com/free-cliparts>Free Downloads - Clipart</a>
+                        <ul class="bullets">
+                            <li><a href=https://www.1001freedownloads.com/free-clipart/bikewheel>Bike Wheel</a></li>
+                            <li><a href=https://www.1001freedownloads.com/free-clipart/rpg-map-symbols-mountains-2>Mountain</a></li>
+                        </ul>
+                    </li>
+                    <li><a href=https://www.spokeshop.com>Spoke Shop</a>
+                        <ul class="bullets">
+                            <li>Company Description</li>
+                            <li>Store Hours</li>
+                            <li>Bicycle Information</li>
+                            <li>Adventure Tour Information</li>
+                        </ul>
+                    </li>
+                    <li><a href=https://www.brokenspokesantafe.com>The Broken Spoke</a>
+                        <ul class="bullets">
+                            <li>Company Description</li>
+                            <li>Repair Services</li>
+                            <li>Images</li>
+                        </ul>
+                    </li>
+                    <li><a href=https://www.owenhousecycling.com>Owenhouse Cycling</a>
+                        <ul class="bullets">
+                            <li>Repair Description</li>
+                            <li>Repair Image</li>
+                        </ul>
+                    </li>
+                    <li><a href=https://www.adventurecycling.org>Adventure Cycling Association</a>
+                        <ul class="bullets">
+                            <li>Event information for Cycle the Continental Divide</li>
+                            <li>Route Map</li>
+                        </ul>
+                    </li>
+                    <li><a href=https://www.the-great-divide.com>The Great Divide</a>
+                        <ul class="bullets">
+                            <li>Event information for Cycle the Continental Divide.</li>
+                            <li>Images</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
         </main>
         <footer>
             <p class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span> | <a href="resource.html">Resources</a> | <a href="video.html">Video Overview</a></p>
@@ -91,5 +93,24 @@
         <script src="scripts/currentdate.js"></script>
 
     </body>
+
+    <script>
+        var urlString = document.location.href;
+        var urlArray = urlString.split('/');
+        var pageHREF=urlArray[urlArray.length-1];
+
+        if (pageHREF !=="") {
+            var menu = document.querySelectorAll('ul#hamburger li a');   //I've set this to primaryNav because that's my ul id value
+            var i;
+
+            for(i=0; i<menu.length; i++) {
+                var currentURL=(menu[i].getAttribute("href"));
+                menu[i].parentNode.className="";
+                if (currentURL===pageHREF) {
+                    menu[i].parentNode.className="active";
+                }
+            }
+        }
+    </script>
 
 </html>

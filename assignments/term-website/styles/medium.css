@@ -30,6 +30,7 @@
         display: inline;
         border-right: 2px solid #E3D2BF;
         padding: 0.5em;
+        border-bottom: none;
     }
 
     ul.hide {

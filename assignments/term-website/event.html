@@ -20,18 +20,18 @@
     <body>
         <header>
             <img src="images/MountainSpokeLogo2.png" width="200" alt="The Mountain Spoke Logo">
-            <h1>The Mountain Spoke</h1>
-            <div class="subheading">The Bicycle Enthusiast's dream.</div>
+            <h1 class="small">The Mountain <br><br>Spoke</h1>
+            <h1 class="large">The Mountain Spoke</h1>
         </header>
         <nav>
             <button onclick="toggleNavMenu()">&#9776;</button>
             <ul id="hamburger" class="hide">
-                <li><a href=home.html>Home</a></li>
-                <li><a href=event.html>Annual Events</a></li>
-                <li><a href=adventure.html>Adventure Tours</a></li>
-                <li><a href=sales.html>Bicycle Shop</a></li>
-                <li><a href=repairs.html>Bicycle Repairs</a></li>
-                <li><a href=contact.html>Contact Us</a></li>
+                <li class="active"><a href=home.html><strong>Home</strong></a></li>
+                <li><a href=event.html><strong>Annual Events</strong></a></li>
+                <li><a href=adventure.html><strong>Adventure Tours</strong></a></li>
+                <li><a href=sales.html><strong>Bicycle Shop</strong></a></li>
+                <li><a href=repairs.html><strong>Bicycle Repairs</strong></a></li>
+                <li><a href=contact.html><strong>Contact Us</strong></a></li>
             </ul>
         </nav>
         <main>
@@ -39,27 +39,29 @@
                 <figure>
                     <img src="images/event-lg.jpg" alt="Cycle the Continental Divide" sizes="100vw" srcset="images/event-sm.jpg 600w, images/event-med.jpg 1024w, images/event-lg.jpg 1200w">
                 </figure>
+                <h2 class="headline"><strong>Cycle the<br>Continental Divide</strong></h2>
             </div>
             <section>
-                <h2>Cycle the Continental Divide</h2>
-                <p>This is a bike expedition over the rooftop of the United States. It will make a lasting impression propelling you forward in your life with a great feeling of achievement, with new friends from across the planet and with a new sense of purpose – fit in body and mind! Rain drops may fall on your left or on your right, but the best drops will fall on the trail. Drops of sweat on the trail of The Great Divide.</p>
-                <p>From Butte to Pinedale, Wyoming, you'll be riding through wide-open mountain valleys. The vegetation thins out into valleys with many different varieties of sage and high-elevation alpine woods. The route crosses the Continental Divide many times, and the climbing is longer with very steep sections on some of the roads. You'll see many cows. You leave Montana crossing the divide into Idaho. You are only in Idaho for 72 miles and ride along some blue-ribbon fishing streams and an old railroad bed on the west side of Yellowstone National Park. You'll cross into Wyoming between Yellowstone and Grand Teton National parks on a very scenic road with some great backcountry campsites and a genuine undeveloped hot springs. The route cuts through a corner of the Tetons before heading east up over the divide again and then down the west side of the Wind River Range. The prettiest alpine region on the whole route can be found here. Just south of Pinedale, is a stretch with the worst mosquitos on the entire route but makes for a great character builder. Farther on there's the unforgetable sensation of riding on the crest of the divide for several miles. You then hit an extremely picturesque section of high desert following the Lander cutoff — part of one of the westward wagon routes. Water is very scarce through here, so carry plenty.</p>
-                <p>
-                    <strong>Dates: </strong>August 28th - September 8th, 2018<br>
-                    <strong>Riding Days: </strong>9<br>
-                    <strong>Start: </strong>Polaris, Montana<br>
-                    <strong>Finish: </strong>South Pass City, Wyoming<br>
-                    <strong>Distance: </strong>510 miles<br>
-                    <strong>Cost: </strong>$1,500<br>
-                    <strong>Requirements: </strong></p>
-                <ul>
-                    <li>High quality mountain bike</li>
-                    <li>Camelback and water filter</li>
-                    <li>Supplies for overnight camping</li>
-                    <li>Bear repellent</li>
-                </ul>
-                <h3>Route:</h3>
-                <img src="images/route.jpg" alt="Cycle the Continental Divide Route" width="500" height="500">
+                <article>
+                    <p>This is a bike expedition over the rooftop of the United States. It will make a lasting impression propelling you forward in your life with a great feeling of achievement, with new friends from across the planet and with a new sense of purpose – fit in body and mind! Rain drops may fall on your left or on your right, but the best drops will fall on the trail. Drops of sweat on the trail of The Great Divide.</p><br>
+                    <p>From Butte to Pinedale, Wyoming, you'll be riding through wide-open mountain valleys. The vegetation thins out into valleys with many different varieties of sage and high-elevation alpine woods. The route crosses the Continental Divide many times, and the climbing is longer with very steep sections on some of the roads. You'll see many cows. You leave Montana crossing the divide into Idaho. You are only in Idaho for 72 miles and ride along some blue-ribbon fishing streams and an old railroad bed on the west side of Yellowstone National Park. You'll cross into Wyoming between Yellowstone and Grand Teton National parks on a very scenic road with some great backcountry campsites and a genuine undeveloped hot springs. The route cuts through a corner of the Tetons before heading east up over the divide again and then down the west side of the Wind River Range. The prettiest alpine region on the whole route can be found here. Just south of Pinedale, is a stretch with the worst mosquitos on the entire route but makes for a great character builder. Farther on there's the unforgetable sensation of riding on the crest of the divide for several miles. You then hit an extremely picturesque section of high desert following the Lander cutoff — part of one of the westward wagon routes. Water is very scarce through here, so carry plenty.</p><br>
+                    <p>
+                        <strong>Dates: </strong>August 28th - September 8th, 2018<br>
+                        <strong>Riding Days: </strong>9<br>
+                        <strong>Start: </strong>Polaris, Montana<br>
+                        <strong>Finish: </strong>South Pass City, Wyoming<br>
+                        <strong>Distance: </strong>510 miles<br>
+                        <strong>Cost: </strong>$1,500<br>
+                        <strong>Requirements: </strong></p>
+                    <ul class="bullets">
+                        <li>High quality mountain bike</li>
+                        <li>Camelback and water filter</li>
+                        <li>Supplies for overnight camping</li>
+                        <li>Bear repellent</li>
+                    </ul>
+                    <h3>Route:</h3>
+                    <img src="images/route.jpg" alt="Cycle the Continental Divide Route" id="map">
+                </article>
             </section>
             <aside>
                 <h2>Register today for Cycle the Continetal Divide!</h2>
@@ -85,12 +87,31 @@
             </aside>
         </main>
         <footer>
-            <p class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span> | <a href="resource.html">Resources</a> | <a href="video.html">Video Overview</a></p>
+            <p class="footer-bar"><strong>&copy;2018 | The Mountain Spoke | <span id="currentdate"></span> | <a href="resource.html">Resources</a> | <a href="video.html">Video Overview</a></strong></p>
         </footer>
 
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
 
     </body>
+
+    <script>
+        var urlString = document.location.href;
+        var urlArray = urlString.split('/');
+        var pageHREF=urlArray[urlArray.length-1];
+
+        if (pageHREF !=="") {
+            var menu = document.querySelectorAll('ul#hamburger li a');   //I've set this to primaryNav because that's my ul id value
+            var i;
+
+            for(i=0; i<menu.length; i++) {
+                var currentURL=(menu[i].getAttribute("href"));
+                menu[i].parentNode.className="";
+                if (currentURL===pageHREF) {
+                    menu[i].parentNode.className="active";
+                }
+            }
+        }
+    </script>
 
 </html>
