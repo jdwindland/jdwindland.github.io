@@ -257,6 +257,12 @@ td{
     padding: .25rem;
 }
 
+video {
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+}
+
 footer {
     color: #B27836;
     background-color: #111927;
