@@ -1,0 +1,163 @@
+<!doctype html>
+
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Centeral Illinois Weather | Springfield</title>
+        <meta name="author" content="Jennifer Windland">
+        <meta name="description" content="Current weather conditions for Springfield.">
+
+        <!-- external style references in the proper cascading order -->
+
+        <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <!-- normalize useragent/browser defaults -->
+        <link href="styles/normalize.css" rel="stylesheet">
+
+        <!-- default styles - small/phone views -->
+        <link href="styles/main.css" rel="stylesheet">
+
+        <!-- medium/tablet views -->
+        <link href="styles/medium.css" rel="stylesheet">
+
+        <!-- large/wide/desktop views -->
+        <link href="styles/large.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+            <img src="images/weather-logo.jpg" alt="Weather Logo">
+            <h1>Central Illinois Weather</h1>
+            <div class="subheading">Climate is what we expect, weather is what we get.</div>
+        </header>
+
+        <!-- site navigation use placeholder references -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul id="hamburger" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="franklin.html">Franklin</a></li>
+                <li><a href="greenville.html">Greenville</a></li>
+                <li><a href="springfield.html">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="top">
+                <div class="city">
+                    <h2>The City of Springfield</h2>
+                    <figure>
+                        <img src="images/franklin-large.jpg" alt="The City of Franklin" sizes="100vw" srcset="images/franklin-small.jpg 600w, images/franklin-medium.jpg 1024w, images/franklin-large.jpg 1200w">
+                    </figure>
+                </div>
+
+                <section class="summary">
+                    <h3>Weather Summary</h3>
+                    <div class="highlow">
+                        <p>High:<strong>90&deg;F</strong></p>
+                        <p>Low:<strong>66&deg;F</strong></p>
+                    </div>
+                    <div class="current">
+                        <picture>
+                            <img src="images/sunny.png" alt="Sunny" width="150" height="150">
+                        </picture>
+                        <br>
+                        <p id="description"><strong>Sunny</strong></p>
+                    </div>
+                    <div class="conditions">
+                        <p>Chance of Precipitation: <strong>0%</strong></p>
+                        <p>Max Wind: <strong>5 mpg SW</strong></p>
+                    </div>
+                </section>
+            </div>
+            <section class="forecast">
+                <h3>10 Day Forecast</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day 1</th>
+                            <th>Day 2</th>
+                            <th>Day 3</th>
+                            <th>Day 4</th>
+                            <th>Day 5</th>
+                            <th>Day 6</th>
+                            <th>Day 7</th>
+                            <th>Day 8</th>
+                            <th>Day 9</th>
+                            <th>Day 10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>89&deg;F</td>
+                            <td>87&deg;F</td>
+                            <td>78&deg;F</td>
+                            <td>75&deg;F</td>
+                            <td>72&deg;F</td>
+                            <td>72&deg;F</td>
+                            <td>79&deg;F</td>
+                            <td>83&deg;F</td>
+                            <td>85&deg;F</td>
+                            <td>89&deg;F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <article>
+                <h3>Two years later: Springfield continues to rebuild after 2016 Tornado</h3>
+                <p class="town-article">
+                    <img src="images/washington-tornado.jpg" alt="Damage from 2013 tornado." width="250" height="250">
+                    It’s been two years since an EF-4 tornado left a scar on the city of Franklin. The images of destroyed businesses and homes still linger in residents’ consciousness, a reminder of the pain and heartache left in the storm’s destructive path.
+                    <br><br>
+                    Two years later, officials say they are impressed with how the city has recovered since that fateful November day. According to Jon Oliphant, Washington’s planning and development director, around 90 percent of the homes destroyed in the tornado have either been rebuilt or are in the process of being rebuilt.
+                    <br><br>
+                    Immediately following the tornado, Oliphant said, he and other city officials weren’t entirely sure whether displaced residents would return to Washington after settling in surrounding communities. “Just the fact that the time of year when it happened, in the middle of November, and then we had a terrible winter the following (months), we weren’t really sure as to how many of those folks were going to come back,” Oliphant said. “I don’t know if we have a firm grasp on it, but I would estimate that probably 80-85 percent of the homes that have been rebuilt are from the original owners; certainly a large percentage of those are the original residents.” A speedy rebuilding, Oliphant said, has further helped the city avoid taking drastic measures from an economic standpoint.
+                </p>
+            </article>
+
+        </main>
+
+        <footer>
+            <aside>
+                The Weather Site <br>
+                123 Main Street <br>
+                Franklin, MU 83454 <br>
+                (999)999-9999 <br>
+                contact@theurl.com
+            </aside>
+            <p class="footer-bar">&copy;2018 All Rights Reserved | Central Illinois Weather | <span id="currentdate"></span></p>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+
+        <script>
+            var urlString = document.location.href;
+            var urlArray = urlString.split('/');
+            var pageHREF=urlArray[urlArray.length-1];
+
+            if (pageHREF !=="") {
+                var menu = document.querySelectorAll('ul#hamburger li a');   //I've set this to primaryNav because that's my ul id value
+                var i;
+
+                for(i=0; i<menu.length; i++) {
+                    var currentURL=(menu[i].getAttribute("href"));
+                    menu[i].parentNode.className="";
+                    if (currentURL===pageHREF) {
+                        menu[i].parentNode.className="active";
+                    }
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
