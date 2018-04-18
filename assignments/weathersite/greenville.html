@@ -54,26 +54,27 @@
                 <div class="city">
                     <h2>The City of Greenville</h2>
                     <figure>
-                        <img src="images/franklin-large.jpg" alt="The City of Franklin" sizes="100vw" srcset="images/franklin-small.jpg 600w, images/franklin-medium.jpg 1024w, images/franklin-large.jpg 1200w">
+                        <img src="images/greenville-large.jpg" alt="The City of Greenville" sizes="100vw" srcset="images/greenville-small.jpg 600w, images/greenville-medium.jpg 1024w, images/greenville-large.jpg 1200w">
                     </figure>
                 </div>
 
                 <section class="summary">
                     <h3>Weather Summary</h3>
                     <div class="highlow">
-                        <p>High:<strong>90&deg;F</strong></p>
-                        <p>Low:<strong>66&deg;F</strong></p>
+                        <p>Current: <strong><span id="temp_g"></span>&deg;F</strong></p>
+                        <p>High: <strong><span id="high_g"></span>&deg;F</strong></p>
+                        <p>Low: <strong><span id="low_g"></span>&deg;F</strong></p>
                     </div>
                     <div class="current">
                         <picture>
-                            <img src="images/sunny.png" alt="Sunny" width="150" height="150">
+                            <img id="w_icon_g" src="" alt="Current Weather" width="150" height="150">
                         </picture>
                         <br>
-                        <p id="description"><strong>Sunny</strong></p>
+                        <p id="description"><strong id="current_g"></strong></p>
                     </div>
                     <div class="conditions">
-                        <p>Chance of Precipitation: <strong>0%</strong></p>
-                        <p>Max Wind: <strong>5 mpg SW</strong></p>
+                        <p>Wind Speed: <strong><span id="wind_g"></span> MPH <span id="wind_dir_g"></span></strong></p>
+                        <p id="forecast_g">forecast</p>
                     </div>
                 </section>
             </div>
@@ -112,14 +113,14 @@
             </section>
 
             <article>
-                <h3>Two years later: Greenville continues to rebuild after 2016 Tornado</h3>
+                <h3>Chance of Rain/Snow Showers On Wednesday and Later Overnight</h3>
                 <p class="town-article">
-                    <img src="images/washington-tornado.jpg" alt="Damage from 2013 tornado." width="250" height="250">
-                    It’s been two years since an EF-4 tornado left a scar on the city of Franklin. The images of destroyed businesses and homes still linger in residents’ consciousness, a reminder of the pain and heartache left in the storm’s destructive path.
+                    <img src="images/GreenvilleField.jpg" alt="Farm Fields" width="250" height="250">
+                    This week may not feel like Spring, but it's far short of Winter conditions, especially when you look what's happening at other locations around the country. Expect a daily mix of clouds and sun and for temperatures to be well below average.
                     <br><br>
-                    Two years later, officials say they are impressed with how the city has recovered since that fateful November day. According to Jon Oliphant, Washington’s planning and development director, around 90 percent of the homes destroyed in the tornado have either been rebuilt or are in the process of being rebuilt.
+                    On Wednesday, though, we'll experience a breezy/windy day with winds up to 35 mph at times with mostly cloudy skies and highs in around 60-degrees. There is a chance of seeing a few showers, especially in the midday hours. By the evening and overnight as temperatures fall to the mid 30s, expect some rain showers to be mixed with snow showers. Those in our northern most counties will see some minor accumulation of snow by early Thursday, but that accumulation will fade quickly on Thursday morning. On the backside of that weather system, it'll be mostly cloudy and cooler as highs fall to around 50 on Thursday and the mid-50s on Friday. Lows will come in from the low to upper 30s.
                     <br><br>
-                    Immediately following the tornado, Oliphant said, he and other city officials weren’t entirely sure whether displaced residents would return to Washington after settling in surrounding communities. “Just the fact that the time of year when it happened, in the middle of November, and then we had a terrible winter the following (months), we weren’t really sure as to how many of those folks were going to come back,” Oliphant said. “I don’t know if we have a firm grasp on it, but I would estimate that probably 80-85 percent of the homes that have been rebuilt are from the original owners; certainly a large percentage of those are the original residents.” A speedy rebuilding, Oliphant said, has further helped the city avoid taking drastic measures from an economic standpoint.
+                    So far the weekend looks to be mostly cloudy with lows in the upper 30s to low 40s and highs in the upper 50s on Saturday, then the low 60s on Sunday. By Monday and Tuesday, we could be seeing sunshine and highs in the mid-60s.
                 </p>
             </article>
 
@@ -138,7 +139,7 @@
 
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
-
+        <script src="scripts/wu-weather-green.js"></script>
         <script>
             var urlString = document.location.href;
             var urlArray = urlString.split('/');

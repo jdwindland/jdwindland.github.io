@@ -61,19 +61,20 @@
                 <section class="summary">
                     <h3>Weather Summary</h3>
                     <div class="highlow">
-                        <p>High:<strong>90&deg;F</strong></p>
-                        <p>Low:<strong>66&deg;F</strong></p>
+                        <p>Current: <strong><span id="temp_f"></span>&deg;F</strong></p>
+                        <p>High: <strong><span id="high_f"></span>&deg;F</strong></p>
+                        <p>Low: <strong><span id="low_f"></span>&deg;F</strong></p>
                     </div>
                     <div class="current">
                         <picture>
-                            <img src="images/sunny.png" alt="Sunny" width="150" height="150">
+                            <img id="w_icon_f" src="" alt="Current Weather" width="150" height="150">
                         </picture>
                         <br>
-                        <p id="description"><strong>Sunny</strong></p>
+                        <p id="description"><strong id="current_f"></strong></p>
                     </div>
                     <div class="conditions">
-                        <p>Chance of Precipitation: <strong>0%</strong></p>
-                        <p>Max Wind: <strong>5 mpg SW</strong></p>
+                        <p>Wind Speed: <strong><span id="wind_f"></span> MPH <span id="wind_dir_f"></span></strong></p>
+                        <p id="forecast_f">forecast</p>
                     </div>
                 </section>
             </div>
@@ -138,7 +139,7 @@
 
         <script src="scripts/hamburger.js"></script>
         <script src="scripts/currentdate.js"></script>
-
+        <script src="scripts/wu-weather.js"></script>
         <script>
             var urlString = document.location.href;
             var urlArray = urlString.split('/');

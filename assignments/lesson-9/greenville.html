@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Centeral Illinois Weather | Greenville</title>
+        <meta name="author" content="Jennifer Windland">
+        <meta name="description" content="Current weather conditions for Greenville.">
+
+        <!-- external style references in the proper cascading order -->
+
+        <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <!-- normalize useragent/browser defaults -->
+        <link href="styles/normalize.css" rel="stylesheet">
+
+        <!-- default styles - small/phone views -->
+        <link href="styles/main.css" rel="stylesheet">
+
+        <!-- medium/tablet views -->
+        <link href="styles/medium.css" rel="stylesheet">
+
+        <!-- large/wide/desktop views -->
+        <link href="styles/large.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+            <img src="images/weather-logo.jpg" alt="Weather Logo">
+            <h1>Central Illinois Weather</h1>
+            <div class="subheading">Climate is what we expect, weather is what we get.</div>
+        </header>
+
+        <!-- site navigation use placeholder references -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul id="hamburger" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="franklin.html">Franklin</a></li>
+                <li><a href="greenville.html">Greenville</a></li>
+                <li><a href="springfield.html">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="top">
+                <div class="city">
+                    <h2>The City of Greenville</h2>
+                    <figure>
+                        <img src="images/greenville-large.jpg" alt="The City of Greenville" sizes="100vw" srcset="images/greenville-small.jpg 600w, images/greenville-medium.jpg 1024w, images/greenville-large.jpg 1200w">
+                    </figure>
+                </div>
+
+                <section class="summary">
+                    <h3>Weather Summary</h3>
+                    <div class="highlow">
+                        <p>Current: <strong><span id="temp_g"></span>&deg;F</strong></p>
+                        <p>High: <strong><span id="high_g"></span>&deg;F</strong></p>
+                        <p>Low: <strong><span id="low_g"></span>&deg;F</strong></p>
+                    </div>
+                    <div class="current">
+                        <picture>
+                            <img id="w_icon_g" src="" alt="Current Weather" width="150" height="150">
+                        </picture>
+                        <br>
+                        <p id="description"><strong id="current_g"></strong></p>
+                    </div>
+                    <div class="conditions">
+                        <p>Wind Speed: <strong><span id="wind_g"></span> MPH <span id="wind_dir_g"></span></strong></p>
+                        <p id="forecast_g">forecast</p>
+                    </div>
+                </section>
+            </div>
+            <section class="forecast">
+                <h3>10 Day Forecast</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day 1</th>
+                            <th>Day 2</th>
+                            <th>Day 3</th>
+                            <th>Day 4</th>
+                            <th>Day 5</th>
+                            <th>Day 6</th>
+                            <th>Day 7</th>
+                            <th>Day 8</th>
+                            <th>Day 9</th>
+                            <th>Day 10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>89&deg;F</td>
+                            <td>87&deg;F</td>
+                            <td>78&deg;F</td>
+                            <td>75&deg;F</td>
+                            <td>72&deg;F</td>
+                            <td>72&deg;F</td>
+                            <td>79&deg;F</td>
+                            <td>83&deg;F</td>
+                            <td>85&deg;F</td>
+                            <td>89&deg;F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <article>
+                <h3>Chance of Rain/Snow Showers On Wednesday and Later Overnight</h3>
+                <p class="town-article">
+                    <img src="images/GreenvilleField.jpg" alt="Farm Fields" width="250" height="250">
+                    This week may not feel like Spring, but it's far short of Winter conditions, especially when you look what's happening at other locations around the country. Expect a daily mix of clouds and sun and for temperatures to be well below average.
+                    <br><br>
+                    On Wednesday, though, we'll experience a breezy/windy day with winds up to 35 mph at times with mostly cloudy skies and highs in around 60-degrees. There is a chance of seeing a few showers, especially in the midday hours. By the evening and overnight as temperatures fall to the mid 30s, expect some rain showers to be mixed with snow showers. Those in our northern most counties will see some minor accumulation of snow by early Thursday, but that accumulation will fade quickly on Thursday morning. On the backside of that weather system, it'll be mostly cloudy and cooler as highs fall to around 50 on Thursday and the mid-50s on Friday. Lows will come in from the low to upper 30s.
+                    <br><br>
+                    So far the weekend looks to be mostly cloudy with lows in the upper 30s to low 40s and highs in the upper 50s on Saturday, then the low 60s on Sunday. By Monday and Tuesday, we could be seeing sunshine and highs in the mid-60s.
+                </p>
+            </article>
+
+        </main>
+
+        <footer>
+            <aside>
+                The Weather Site <br>
+                123 Main Street <br>
+                Franklin, MU 83454 <br>
+                (999)999-9999 <br>
+                contact@theurl.com
+            </aside>
+            <p class="footer-bar">&copy;2018 All Rights Reserved | Central Illinois Weather | <span id="currentdate"></span></p>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/wu-weather-green.js"></script>
+        <script>
+            var urlString = document.location.href;
+            var urlArray = urlString.split('/');
+            var pageHREF=urlArray[urlArray.length-1];
+
+            if (pageHREF !=="") {
+                var menu = document.querySelectorAll('ul#hamburger li a');   //I've set this to primaryNav because that's my ul id value
+                var i;
+
+                for(i=0; i<menu.length; i++) {
+                    var currentURL=(menu[i].getAttribute("href"));
+                    menu[i].parentNode.className="";
+                    if (currentURL===pageHREF) {
+                        menu[i].parentNode.className="active";
+                    }
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

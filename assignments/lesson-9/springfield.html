@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html lang="en-us">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Centeral Illinois Weather | Springfield</title>
+        <meta name="author" content="Jennifer Windland">
+        <meta name="description" content="Current weather conditions for Springfield.">
+
+        <!-- external style references in the proper cascading order -->
+
+        <!-- Google API font reference -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        <!-- normalize useragent/browser defaults -->
+        <link href="styles/normalize.css" rel="stylesheet">
+
+        <!-- default styles - small/phone views -->
+        <link href="styles/main.css" rel="stylesheet">
+
+        <!-- medium/tablet views -->
+        <link href="styles/medium.css" rel="stylesheet">
+
+        <!-- large/wide/desktop views -->
+        <link href="styles/large.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+            <img src="images/weather-logo.jpg" alt="Weather Logo">
+            <h1>Central Illinois Weather</h1>
+            <div class="subheading">Climate is what we expect, weather is what we get.</div>
+        </header>
+
+        <!-- site navigation use placeholder references -->
+        <nav>
+            <button onclick="toggleNavMenu()">&#9776;</button>
+            <ul id="hamburger" class="hide">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="franklin.html">Franklin</a></li>
+                <li><a href="greenville.html">Greenville</a></li>
+                <li><a href="springfield.html">Springfield</a></li>
+                <li><a href="stormcenter.html">Storm Center</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="top">
+                <div class="city">
+                    <h2>The City of Springfield</h2>
+                    <figure>
+                        <img src="images/springfield-large.jpg" alt="The City of Springfield" sizes="100vw" srcset="images/springfield-small.jpg 600w, images/springfield-medium.jpg 1024w, images/springfield-large.jpg 1200w">
+                    </figure>
+                </div>
+
+                <section class="summary">
+                    <h3>Weather Summary</h3>
+                    <div class="highlow">
+                        <p>Current: <strong><span id="temp_s"></span>&deg;F</strong></p>
+                        <p>High: <strong><span id="high_s"></span>&deg;F</strong></p>
+                        <p>Low: <strong><span id="low_s"></span>&deg;F</strong></p>
+                    </div>
+                    <div class="current">
+                        <picture>
+                            <img id="w_icon_s" src="" alt="Current Weather" width="150" height="150">
+                        </picture>
+                        <br>
+                        <p id="description"><strong id="current_s"></strong></p>
+                    </div>
+                    <div class="conditions">
+                        <p>Wind Speed: <strong><span id="wind_s"></span> MPH <span id="wind_dir_s"></span></strong></p>
+                        <p id="forecast_s">forecast</p>
+                    </div>
+                </section>
+            </div>
+            <section class="forecast">
+                <h3>10 Day Forecast</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day 1</th>
+                            <th>Day 2</th>
+                            <th>Day 3</th>
+                            <th>Day 4</th>
+                            <th>Day 5</th>
+                            <th>Day 6</th>
+                            <th>Day 7</th>
+                            <th>Day 8</th>
+                            <th>Day 9</th>
+                            <th>Day 10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>89&deg;F</td>
+                            <td>87&deg;F</td>
+                            <td>78&deg;F</td>
+                            <td>75&deg;F</td>
+                            <td>72&deg;F</td>
+                            <td>72&deg;F</td>
+                            <td>79&deg;F</td>
+                            <td>83&deg;F</td>
+                            <td>85&deg;F</td>
+                            <td>89&deg;F</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <article>
+                <h3>Rain Chances Wednesday, But Generally Dry Into Next Week</h3>
+                <p class="town-article">
+                    <img src="images/LakeSpringfield.jpg" alt="Lake Springfield" width="250" height="250">
+                    Temperatures more typical of mid to late April are gradually building back in across central Illinois. Chilly Canadian air is retreating and moderating temperatures can be expected into early next week. Look for afternoon highs in the mid to upper 50s for the rest of the work week and into the start of the weekend.
+                    <br><br>
+                    The weather pattern overall stays quiet and dry as well for the extended period. However, low pressure lifting over northern Illinois Wednesday brings increasing clouds into the area by Wednesday morning and there could be a few very widely scattered showers for locations along and north of I-74 and very slim chances for spotty showers farther south into the heart of central Illinois. Otherwise, the majority of the area stays dry with mostly cloudy skies and strong south to southwest winds gusting up to 40 mph at times. Additionally, temperatures will take a dive Wednesday afternoon with the passage of the cold front. Wednesday's high temperatures will top out in the mid 50s around Noon and quickly fall to the low to mid 40s by 5pm and down to the low to mid 30s late Wednesday night.
+                    <br><br>
+                    Tranquil weather with lighter winds returns by Thursday. Quiet and dry weather continues under partly to mostly sunny skies over the upcoming weekend and into early next week with a gradual warming trend featuring more seasonable high in the mid to upper 60s.
+                </p>
+            </article>
+
+        </main>
+
+        <footer>
+            <aside>
+                The Weather Site <br>
+                123 Main Street <br>
+                Franklin, MU 83454 <br>
+                (999)999-9999 <br>
+                contact@theurl.com
+            </aside>
+            <p class="footer-bar">&copy;2018 All Rights Reserved | Central Illinois Weather | <span id="currentdate"></span></p>
+        </footer>
+
+        <script src="scripts/hamburger.js"></script>
+        <script src="scripts/currentdate.js"></script>
+        <script src="scripts/wu-weather-spring.js"></script>
+        <script>
+            var urlString = document.location.href;
+            var urlArray = urlString.split('/');
+            var pageHREF=urlArray[urlArray.length-1];
+
+            if (pageHREF !=="") {
+                var menu = document.querySelectorAll('ul#hamburger li a');   //I've set this to primaryNav because that's my ul id value
+                var i;
+
+                for(i=0; i<menu.length; i++) {
+                    var currentURL=(menu[i].getAttribute("href"));
+                    menu[i].parentNode.className="";
+                    if (currentURL===pageHREF) {
+                        menu[i].parentNode.className="active";
+                    }
+                }
+            }
+        </script>
+
+    </body>
+
+</html>
